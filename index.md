@@ -21,6 +21,4 @@ represent relation types. Even if the “visual quality” of the generated diag
 is worse than the one obtained by widely adopted UML-like tools, its simplicity
 of use makes Arrows a very promising tool for sketching conceptual schemas.
 Several are the features that have been integrated into SchemaLink for importing
-LinkML yaml file, drawing schemas, and exporting them. In the remainder of the
-section, we will detail these characteristics. An initial version of SchemaLink
-is live at the following link: <https://fl-14-97.zhdk.cloud.switch.ch/>.
+LinkML yaml file, drawing schemas, and exporting them.
