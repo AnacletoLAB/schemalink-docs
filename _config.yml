@@ -13,3 +13,5 @@ callouts:
     color: yellow
   warning:
     color: red
+  info:
+    color: blue
