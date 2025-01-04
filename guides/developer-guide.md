@@ -4,11 +4,13 @@ parent: Guides
 layout: default
 ---
 
+## Developer Guide
+
 The SchemaLink project is made up of a number of components, all of which fall
 under [the AnacletoLAB organization](https://github.com/AnacletoLAB). More
 pragmatic information can also be found in the README files of each repository.
 
-## The webapp
+### The webapp
 
 {: .info }
 
@@ -31,7 +33,7 @@ project](https://github.com/neo4j-labs/arrows.app). By now, it diverged from it
 considerably, but it maintains the same structure. The repository is structured
 as a monorepo, hosting both apps and libraries in the same codebase.
 
-### Apps
+#### Apps
 
 SchemaLink uses only one app, stored in the [`apps/arrows-ts`
 directory](https://github.com/AnacletoLAB/schemalink-webapp/tree/main/apps/arrows-ts).
@@ -39,7 +41,7 @@ The `arrows-ts` app contains (mostly) TypeScript code that takes care of the
 visual React components, as well as the Redux store. To do so, the app makes
 extensive use of the libraries.
 
-### Libraries
+#### Libraries
 
 There are many libraries hosted in the webapp repository, in the [`libs`
 directory](https://github.com/AnacletoLAB/schemalink-webapp/tree/main/libs).
@@ -59,7 +61,7 @@ Specifically:
 - The `selectors` library gathers some Redux selectors that are generic enough
   to be useful for any app.
 
-## The API
+### The API
 
 {: .info }
 
@@ -79,7 +81,7 @@ enable the webapp's features. This includes exposing useful functionalities from
 the [linkml python library](https://pypi.org/project/linkml/), to assist the
 webapp in handling linkml schemas.
 
-## The deployment
+### The deployment
 
 {: .info }
 
@@ -96,7 +98,7 @@ registry. A traefik container can also be included in the docker compose
 project, acting as a reverse proxy and taking care of routing and securing the
 connection. The deployment is automated using an ansible playbook.
 
-## The docs
+### The docs
 
 {: .info }
 

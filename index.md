@@ -4,6 +4,8 @@ layout: home
 nav_order: 1
 ---
 
+## Home
+
 SchemaLink is a web application that we are currently developing to assist
 LinkML developers in drawing schemas compliant to our model. This interface was
 initially thought as a means for the specification of prompts for SPIRES.

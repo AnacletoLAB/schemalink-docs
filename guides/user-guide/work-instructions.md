@@ -4,13 +4,15 @@ parent: User guide
 layout: default
 ---
 
-## Create a new schema from scratch
+## Work Instructions
+
+### Create a new schema from scratch
 
 1. Open the main menu.
 2. Click on the New button.
 3. Select where to store the new schema.
 
-## Import an existing schema
+### Import an existing schema
 
 1. Open the main menu.
 2. Click on the Import button.
@@ -27,13 +29,13 @@ Schemalink will validate the schema you are trying to import, and return any
 validation errors. A non-valid schema can still be imported, but might lead to
 unexpected results.
 
-## Change the schema name
+### Change the schema name
 
 1. Click on the schema name.
 2. Edit the name.
 3. Click on Save.
 
-## Add a new class
+### Add a new class
 
 1. Make sure the general inspector is visible by clicking on any empty space in
    the canvas.
@@ -46,13 +48,13 @@ Classes without a name as well as classes with a non-unique name won't be
 included in any LinkML export. The same is true for relationships that involve
 those classes.
 
-## Add a new relationship
+### Add a new relationship
 
 1. Hover over the perimeter of a class, until a dark blue circle appears.
 2. Drag the circle to another existing class, or to an empty space to create a
    new class at the same time.
 
-## Edit details of a class or relationship
+### Edit details of a class or relationship
 
 1. Select any number of classes or relationship.
 2. Edit the properties in the detail inspector.
@@ -62,7 +64,7 @@ those classes.
 Only some options will be available if more than one entity is selected,
 especially when the selection includes both classes and relationships.
 
-### Edit ontologies and examples
+#### Edit ontologies and examples
 
 1. Click on a single class or relationship.
 2. In the detail inspector, expand the ontologies dropdown and select those that
@@ -80,14 +82,14 @@ Ontologies and examples are fetched from a remote repository: every time
 Schemalink is loaded, or the list of ontologies for an entity is changed, you'll
 need to wait for multiple requests to complete before the dropdown are enabled.
 
-### Add/edit attributes
+#### Add/edit attributes
 
 1. Select any number of classes or relationships.
 2. In the detail inspector, click on the + Attribute button.
 3. Specify a name for the attribute.
 4. To further edit the attribute, click on it to expand the edit form.
 
-### Edit relationship cardinality
+#### Edit relationship cardinality
 
 1. Select any number of relationships.
 2. In the detail inspector, expand the cardinality dropdown and select a
@@ -100,7 +102,7 @@ need to wait for multiple requests to complete before the dropdown are enabled.
 When Custom is selected, if the minimum cardinality is greater or equal than the
 maximum cardinality, neither of them will be included in any LinkML export.
 
-## Export the schema
+### Export the schema
 
 1. Click on the download/export button.
 2. Choose the format you want to export the schema to, by switching to the
@@ -108,7 +110,7 @@ maximum cardinality, neither of them will be included in any LinkML export.
 3. Check the preview to make sure the export is correct.
 4. Click on Download.
 
-## Change the style of the schema
+### Change the style of the schema
 
 1. Click on the Style accordion in the inspector to expand the style menu. Note
    that the general inspector and the detail inspector offer different styling
