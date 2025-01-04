@@ -119,6 +119,13 @@ need to wait for multiple requests to complete before the dropdown are enabled.
 2. In the detail inspector, click on the + Attribute button.
 3. Specify a name for the attribute.
 4. To further edit the attribute, click on it to expand the edit form.
+5. Using the form, edit:
+
+   - The attribute description.
+   - The attribute range.
+   - The attribute collection type, if any.
+   - Whether the attribute is required.
+   - Whether the attribute is the identifier for its class.
 
 #### Edit relationship cardinality
 
