@@ -10,10 +10,8 @@ pragmatic information can also be found in the README files of each repository.
 
 ## The webapp
 
-{: .highlight-title }
+{: .info }
 
-> In a glance
->
 > - Webapp: <https://schemalink.anacleto.di.unimi.it/>.
 > - Repository: <https://github.com/AnacletoLAB/schemalink-webapp>.
 > - Main technologies: [Node](https://nodejs.org/docs/latest/api/),
@@ -63,10 +61,8 @@ Specifically:
 
 ## The API
 
-{: .highlight-title }
+{: .info }
 
-> In a glance
->
 > - Swagger docs: <https://schemalink.anacleto.di.unimi.it/api/docs>.
 > - Repository: <https://github.com/AnacletoLAB/schemalink-api>.
 > - Main technologies: [Python](https://docs.python.org/3/) and
@@ -85,10 +81,8 @@ webapp in handling linkml schemas.
 
 ## The deployment
 
-{: .highlight-title }
+{: .info }
 
-> In a glance
->
 > - Repository: <https://github.com/AnacletoLAB/schemalink-deploy>.
 > - Main technologies:
 >   [Ansible](https://docs.ansible.com/ansible/latest/index.html),
@@ -98,15 +92,14 @@ webapp in handling linkml schemas.
 SchemaLink is deployed as a docker compose project. To achieve that, both the
 webapp and the api offer a `Dockerfile`. On each tag on the main branch, the
 docker image is built by a GitHub action and pushed to the GitHub container
-registry. A traefik container is also part of the docker compose project, acting
-as a reverse proxy and taking care of routing and securing the connection.
+registry. A traefik container can also be included in the docker compose
+project, acting as a reverse proxy and taking care of routing and securing the
+connection. The deployment is automated using an ansible playbook.
 
 ## The docs
 
-{: .highlight-title }
+{: .info }
 
-> In a glance
->
 > - Repository: <https://github.com/AnacletoLAB/schemalink-docs>.
 > - Main technologies: [Jekyll](https://jekyllrb.com/docs/),
 >   [Markdown](https://www.markdownguide.org/), [Just the
