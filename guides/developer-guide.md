@@ -10,10 +10,11 @@ pragmatic information can also be found in the README files of each repository.
 
 ## The webapp
 
-{: .important-title }
+{: .highlight-title }
 
 > In a glance
 >
+> - Webapp: <https://schemalink.anacleto.di.unimi.it/>.
 > - Repository: <https://github.com/AnacletoLAB/schemalink-webapp>.
 > - Main technologies: [Node](https://nodejs.org/docs/latest/api/),
 >   [Vite](https://vite.dev/guide/),
@@ -46,25 +47,27 @@ There are many libraries hosted in the webapp repository, in the [`libs`
 directory](https://github.com/AnacletoLAB/schemalink-webapp/tree/main/libs).
 Specifically:
 
+- The `api` library is an adapter to the [`schemalink-api`
+  project](https://github.com/AnacletoLAB/schemalink-api).
 - The `graphics` library provides the logic for rendering and interacting with
   the canvas.
 - The `linkml` library takes care of anything related to LinkML, namely
   importing and exporting the graph from and to this language.
 - The `model` library implements the data model for the main entities that are
   needed to run the webapp.
-- The `ontology-search` library is an API which is supposed to function as an
-  adapter to any ontology search engine, so that the webapp doesn't have to care
-  about the specifics of such search engine. Right now the search engine that
-  the library uses is <https://www.ebi.ac.uk/ols4/>.
+- The `ontology-search` library is an adapter to an ontology search engine.
+  Right now the search engine that the library uses is
+  <https://www.ebi.ac.uk/ols4/>.
 - The `selectors` library gathers some Redux selectors that are generic enough
   to be useful for any app.
 
 ## The API
 
-{: .important-title }
+{: .highlight-title }
 
 > In a glance
 >
+> - Swagger docs: <https://schemalink.anacleto.di.unimi.it/api/docs>.
 > - Repository: <https://github.com/AnacletoLAB/schemalink-api>.
 > - Main technologies: [Python](https://docs.python.org/3/) and
 >   [FastAPI](https://fastapi.tiangolo.com/).
@@ -75,15 +78,14 @@ Specifically:
 >   fastapi dev main.py
 >   ```
 
-Endpoints in the `/linkml` group use the [linkml python
-library](https://pypi.org/project/linkml/) to assist the webapp in handling
-linkml schemas. Endpoints in the `/openai` group use the [openai python
-sdk](https://pypi.org/project/openai/) to power the GPT-based features of the
-webapp.
+The API project runs alongside the webapp and provides useful endpoints to
+enable the webapp's features. This includes exposing useful functionalities from
+the [linkml python library](https://pypi.org/project/linkml/), to assist the
+webapp in handling linkml schemas.
 
 ## The deployment
 
-{: .important-title }
+{: .highlight-title }
 
 > In a glance
 >
@@ -101,7 +103,7 @@ as a reverse proxy and taking care of routing and securing the connection.
 
 ## The docs
 
-{: .important-title }
+{: .highlight-title }
 
 > In a glance
 >
@@ -109,6 +111,12 @@ as a reverse proxy and taking care of routing and securing the connection.
 > - Main technologies: [Jekyll](https://jekyllrb.com/docs/),
 >   [Markdown](https://www.markdownguide.org/), [Just the
 >   Docs](https://just-the-docs.github.io/just-the-docs/).
+> - Run locally - needs Ruby:
+>
+>   ```shell
+>   gem install jekyll bundler
+>   bundle exec jekyll serve
+>   ```
 
 The docs project is used to generate this website. To update this website, it's
 enough that you commit and push your changes to the docs project. A GitHub
