@@ -6,7 +6,7 @@ layout: default
 
 This is how the general view of schemalink looks like:
 
-![home page](/assets/images/schemalink_screenshot.png)
+![home page](/assets/images/schemalink_screenshot.jpg)
 
 In this view you can find:
 
