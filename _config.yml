@@ -7,3 +7,7 @@ aux_links:
 
 logo: "/assets/images/schemalink_logo.svg"
 favicon_ico: "/assets/images/schemalink_logo.svg"
+
+callouts:
+  highlight:
+    color: yellow
