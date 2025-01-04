@@ -11,3 +11,5 @@ favicon_ico: "/assets/images/schemalink_logo.svg"
 callouts:
   highlight:
     color: yellow
+  warning:
+    color: red
