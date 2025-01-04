@@ -29,6 +29,15 @@ Schemalink will validate the schema you are trying to import, and return any
 validation errors. A non-valid schema can still be imported, but might lead to
 unexpected results.
 
+### Edit schema properties
+
+1. Make sure the general inspector is visible by clicking on any empty space in
+   the canvas.
+2. Using the form in the general inspector, edit:
+
+   - The schema description.
+   - The schema license.
+
 ### Change the schema name
 
 1. Click on the schema name.
@@ -54,10 +63,32 @@ those classes.
 2. Drag the circle to another existing class, or to an empty space to create a
    new class at the same time.
 
-### Edit details of a class or relationship
+### Edit details of a class
 
-1. Select any number of classes or relationship.
-2. Edit the properties in the detail inspector.
+1. Select any number of classes.
+2. Using the form in the detail inspector, edit:
+
+   - The class description.
+   - The class name.
+   - The class ontologies and examples - see dedicated section below.
+   - The class attributes - see dedicated section below.
+
+{: .highlight }
+
+Only some options will be available if more than one entity is selected,
+especially when the selection includes both classes and relationships.
+
+### Edit details of a relationship
+
+1. Select any number of relationships.
+2. Using the form in the detail inspector, edit:
+
+   - The relationship description.
+   - The relationship name.
+   - The type of relationship, choosing between association and inheritance.
+   - The relationship cardinality - see dedicated section below.
+   - The relationship ontologies and examples - see dedicated section below.
+   - The relationship attributes - see dedicated section below.
 
 {: .highlight }
 
@@ -112,6 +143,11 @@ maximum cardinality, neither of them will be included in any LinkML export.
 
 ### Change the style of the schema
 
-1. Click on the Style accordion in the inspector to expand the style menu. Note
-   that the general inspector and the detail inspector offer different styling
-   options.
+1. Click on the Style accordion in the inspector to expand the style menu.
+2. Use the form to change a variety of style options, such as:
+
+{: .highlight }
+
+The general inspector and the detail inspector offer different styling options.
+Namely, the general inspector allows to perform global changes, while the detail
+inspector allows to perform changes on a per-entity basis.
