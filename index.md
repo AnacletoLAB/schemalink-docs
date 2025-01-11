@@ -4,7 +4,7 @@ layout: home
 nav_order: 1
 ---
 
-## Home
+## SchemaLink
 
 SchemaLink is a web application that we are currently developing to assist
 LinkML developers in drawing schemas compliant to our model. This interface was
