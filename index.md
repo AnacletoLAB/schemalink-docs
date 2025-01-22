@@ -7,7 +7,7 @@ nav_order: 1
 ## SchemaLink
 
 SchemaLink is a web application designed to assist LinkML developers in creating and curating schemas.
-<!--- ema: io commento per non perdere ciò che modifico, quando abbiamo una versione da mandare agli americani occurrerà un "repulisti" dei commenti
+<!--- ema: io commento per non perdere ciò che modifico, quando abbiamo una versione da pubblicare occurrerà un "repulisti" dei commenti
 that we are currently developing to assist 
 compliant to our model. This interface was
 initially thought as a means for the specification of prompts for SPIRES.
@@ -24,7 +24,7 @@ SchemaLink allows to create and edit classes, relationships, slots and attribute
 Nodes represent classes in the schema, edges define relationships between classes.
 Users can easily add, remove, or update schema items and adjust their properties through an intuitive interface.
 
-### Features
+**Features**
 
 - **Interactive Schema Creation and Editing**
   - Define classes, relationships, slots and attributes, and ontology annotations
