@@ -6,6 +6,6 @@ layout: default
 
 ## User Guide
 
-The schemalink web application helps you drawing schemas compliant to our model.
-This guide will help you understand how to use it and how to perform the most
-common tasks.
+The schemalink web application helps you drawing and editing LinkML schemas.
+This guide will help you understand how to use SchemaLink.
+<!-- ema and how to perform the most common tasks. -->
