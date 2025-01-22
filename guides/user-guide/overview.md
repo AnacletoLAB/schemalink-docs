@@ -6,11 +6,12 @@ layout: default
 
 ## Overview
 
-This is how the general view of schemalink looks like:
+<!-- ema This is how the general view of schemalink looks like: -->
+The figure below describes SchemaLink canvas and side panels.
 
 ![home page](../../assets/images/schemalink_screenshot.jpg)
 
-In this view you can find:
+<!-- In this view you can find: -->
 
 1. The main menu. The menu opens when hovering over the schemalink logo and
    contains actions such as creating a new schema, or importing an existing one.
