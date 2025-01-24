@@ -21,7 +21,7 @@ to explain its characteristics.
 >   [TypeScript](https://www.typescriptlang.org/docs/), JavaScript,
 >   [React](https://react.dev/learn), [Redux](https://redux.js.org/usage/) and
 >   [Semantic UI React](https://react.semantic-ui.com/)
-> - Run locally - needs Node and npm:
+> - Run locally - requires Node and npm:
 >
 >   ```shell
 >   npm install
@@ -68,7 +68,7 @@ Specifically:
 > - Repository: <https://github.com/AnacletoLAB/schemalink-api>
 > - Main technologies: [Python](https://docs.python.org/3/) and
 >   [FastAPI](https://fastapi.tiangolo.com/)
-> - Run locally - needs Python:
+> - Run locally - requires Python:
 >
 >   ```shell
 >   pip install -r requirements
@@ -105,7 +105,7 @@ connection. The deployment is automated using an `Ansible` playbook.
 > - Main technologies: [Jekyll](https://jekyllrb.com/docs/),
 >   [Markdown](https://www.markdownguide.org/), [Just the
 >   Docs](https://just-the-docs.github.io/just-the-docs/).
-> - Run locally - needs Ruby:
+> - Run locally - requires Ruby:
 >
 >   ```shell
 >   gem install jekyll bundler

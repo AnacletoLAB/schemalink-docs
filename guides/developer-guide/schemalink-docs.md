@@ -12,7 +12,7 @@ layout: default
 > - Main technologies: [Jekyll](https://jekyllrb.com/docs/),
 >   [Markdown](https://www.markdownguide.org/), [Just the
 >   Docs](https://just-the-docs.github.io/just-the-docs/).
-> - Run locally - needs Ruby:
+> - Run locally - requires Ruby:
 >
 >   ```shell
 >   gem install jekyll bundler

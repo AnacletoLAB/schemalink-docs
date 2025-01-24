@@ -12,7 +12,7 @@ layout: default
 > - Repository: <https://github.com/AnacletoLAB/schemalink-api>
 > - Main technologies: [Python](https://docs.python.org/3/) and
 >   [FastAPI](https://fastapi.tiangolo.com/)
-> - Run locally - needs Python:
+> - Run locally - requires Python:
 >
 >   ```shell
 >   pip install -r requirements
