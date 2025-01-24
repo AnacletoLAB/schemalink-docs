@@ -145,3 +145,9 @@ see GitHub docs on:
   tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
 - [Working with the Container
   registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry)
+
+{: .warning }
+
+The personal access token is tied to a GitHub account. If that GitHub account
+belongs to a contributor, make sure to change this token when the contributor
+leaves the project.
