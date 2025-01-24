@@ -1,14 +1,14 @@
 ---
-title: Developer guide
-parent: Guides
+title: Overview
+parent: Developer guide
 layout: default
 ---
 
-## Developer Guide
+## Overview
 
-SchemaLink repositories are <!-- made up of a number of components, all of which fall
-under --> available within the [AnacletoLAB organization](https://github.com/AnacletoLAB). Each repository provides a README to explain its characteristics. <!-- More
-pragmatic information can also be found in the README files of each repository.-->
+SchemaLink repositories are available within the [AnacletoLAB
+organization](https://github.com/AnacletoLAB). Each repository provides a README
+to explain its characteristics.
 
 ### The webapp
 
@@ -29,17 +29,16 @@ pragmatic information can also be found in the README files of each repository.-
 >   ```
 
 The webapp code was originally forked from Neo4j's [Arrows
-repository](https://github.com/neo4j-labs/arrows.app). <!-- By now, it diverged from it
-considerably, but --> It maintains the same structure although we introduced new features. The repository is structured
-as a ``monorepo``, hosting both apps and libraries in the same codebase.
+repository](https://github.com/neo4j-labs/arrows.app). It maintains the same
+structure although we introduced new features. The repository is structured as a
+`monorepo`, hosting both apps and libraries in the same codebase.
 
 #### Apps
 
 SchemaLink uses only one app, stored in the [`apps/arrows-ts`
 directory](https://github.com/AnacletoLAB/schemalink-webapp/tree/main/apps/arrows-ts).
-The `arrows-ts` app contains (mostly) ``TypeScript`` code that handles the
-visual ``React`` components, as well as the ``Redux`` store. <!-- To do so, the app makes
-extensive use of the libraries. -->
+The `arrows-ts` app contains (mostly) `TypeScript` code that handles the
+visual `React` components, as well as the `Redux` store.
 
 #### Libraries
 
@@ -51,16 +50,16 @@ Specifically:
   project](https://github.com/AnacletoLAB/schemalink-api)
 - The `graphics` library provides the logic for rendering and interacting with
   the canvas
-- The `linkml` library handles LinkML schemas,
- converting the graph in the SchemaLink's canvas from and to this language
+- The `linkml` library handles LinkML schemas, converting the graph in the
+  SchemaLink's canvas from and to this language
 - The `model` library implements the data model for the main entities that are
   needed to run the webapp
 - The `ontology-search` library is an adapter to an ontology search engine.
   Right now the search engine that the library uses is
   <https://www.ebi.ac.uk/ols4/>
-- The `selectors` library gathers some ``Redux`` selectors that are generic enough
-  to be useful for any app
-  
+- The `selectors` library gathers some `Redux` selectors that are generic
+  enough to be useful for any app
+
 ### The API
 
 {: .info }
@@ -94,9 +93,9 @@ webapp in handling linkml schemas.
 SchemaLink is deployed as a docker compose project. To achieve that, both the
 webapp and the api offer a `Dockerfile`. On each tag on the main branch, the
 docker image is built by a GitHub action and pushed to the GitHub container
-registry. A ``Traefik`` container can also be included in the docker compose
+registry. A `Traefik` container can also be included in the docker compose
 project, acting as a reverse proxy and taking care of routing and securing the
-connection. The deployment is automated using an ``Ansible`` playbook.
+connection. The deployment is automated using an `Ansible` playbook.
 
 ### The docs
 
@@ -113,7 +112,7 @@ connection. The deployment is automated using an ``Ansible`` playbook.
 >   bundle exec jekyll serve
 >   ```
 
-``Just the Docs`` is used to generate this website. To update this website, it is
-enough to commit and push changes to the docs project. A GitHub
-action will run on the latest commit on the main branch, building the website
-using ``Jekyll`` and deploying it using ``GitHub pages``.
+`Just the Docs` is used to generate this website. To update this website, it
+is enough to commit and push changes to the docs project. A GitHub action will
+run on the latest commit on the main branch, building the website using
+`Jekyll` and deploying it using `GitHub pages`.
