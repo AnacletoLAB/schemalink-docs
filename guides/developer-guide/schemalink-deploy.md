@@ -14,13 +14,6 @@ layout: default
 >   [Docker](https://docs.docker.com/),
 >   [Traefik](https://doc.traefik.io/traefik/).
 
-SchemaLink is deployed as a docker compose project. To achieve that, both the
-webapp and the api offer a `Dockerfile`. On each tag on the main branch, the
-docker image is built by a GitHub action and pushed to the GitHub container
-registry. A `Traefik` container can also be included in the docker compose
-project, acting as a reverse proxy and taking care of routing and securing the
-connection. The deployment is automated using an `Ansible` playbook.
-
 ### Deploy a different/new version of the webapp/API
 
 Which version of the webapp/API is currently deployed is specified in the

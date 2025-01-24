@@ -19,11 +19,6 @@ layout: default
 >   fastapi dev main.py
 >   ```
 
-The API project runs alongside the webapp and provides useful endpoints to
-enable the webapp's features. This includes exposing useful functionalities from
-the [linkml python library](https://pypi.org/project/linkml/), to assist the
-webapp in handling linkml schemas.
-
 ### Add a new endpoint
 
 Adding a new endpoint to SchemaLink's API is as easy as adding a new function to

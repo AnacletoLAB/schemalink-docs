@@ -19,11 +19,6 @@ layout: default
 >   bundle exec jekyll serve
 >   ```
 
-`Just the Docs` is used to generate this website. To update this website, it
-is enough to commit and push changes to the docs project. A GitHub action will
-run on the latest commit on the main branch, building the website using
-`Jekyll` and deploying it using `GitHub pages`.
-
 ### Change the content of the website
 
 To change the content of the website, edit the corresponding markdown file.
