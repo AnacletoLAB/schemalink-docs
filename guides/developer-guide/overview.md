@@ -1,6 +1,6 @@
 ---
 title: Overview
-parent: Developer guide
+parent: Developer Guide
 layout: default
 ---
 

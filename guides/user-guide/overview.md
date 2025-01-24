@@ -1,6 +1,6 @@
 ---
 title: Overview
-parent: User guide
+parent: User Guide
 layout: default
 ---
 

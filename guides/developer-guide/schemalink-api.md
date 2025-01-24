@@ -1,6 +1,6 @@
 ---
-title: Api
-parent: Work instructions
+title: SchemaLink API
+parent: Developer Guide
 layout: default
 ---
 

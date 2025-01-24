@@ -1,5 +1,5 @@
 ---
-title: Developer guide
+title: Developer Guide
 parent: Guides
 layout: default
 ---

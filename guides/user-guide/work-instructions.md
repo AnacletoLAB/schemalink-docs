@@ -1,6 +1,6 @@
 ---
 title: Work Instructions
-parent: User guide
+parent: User Guide
 layout: default
 ---
 
