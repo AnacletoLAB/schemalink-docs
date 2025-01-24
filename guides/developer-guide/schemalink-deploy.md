@@ -38,7 +38,7 @@ file. Then, if needed, create a new configuration file in the
 directory. The filename should be the same as the hostname in the
 `inventory/hosts.yml` file.
 
-{: .info }
+{: .highlight }
 
 If you don't create a dedicated configuration file, the new instance will use
 the variables defined in the

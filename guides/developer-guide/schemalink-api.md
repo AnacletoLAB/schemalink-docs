@@ -100,7 +100,7 @@ Interaction with the base API is implemented in the `/api/openai/ask/` endpoint.
 The `client.beta.assistants` and `client.beta.threads` modules take care of
 interacting with OpenAI's assistant API.
 
-{: .info }
+{: .highlight }
 
 The SchemaLink assistant is manually managed by AnacletoLAB. Because of this,
 for the time being, there is no need to use the `client.beta.assistants` module
@@ -123,7 +123,7 @@ git tag -a 1.0.0 -m "1.0.0"
 git push --tags
 ```
 
-{: .info }
+{: .highlight }
 
 When creating a new tag, consider following [semantic
 versioning](https://semver.org/).

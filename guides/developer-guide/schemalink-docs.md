@@ -23,7 +23,7 @@ layout: default
 
 To change the content of the website, edit the corresponding markdown file.
 
-{: .info }
+{: .highlight }
 
 > You can use GitHub online editor to edit the content of the website:
 >
