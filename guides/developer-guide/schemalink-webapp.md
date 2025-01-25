@@ -24,6 +24,22 @@ layout: default
 
 ### The [React-Redux app](https://github.com/AnacletoLAB/schemalink-webapp/tree/main/apps/arrows-ts)
 
+#### Change the edit forms
+
+To change the edit forms, head to the
+[apps/arrows-ts/src/components/DetailInspector.tsx](https://github.com/AnacletoLAB/schemalink-webapp/blob/main/apps/arrows-ts/src/components/DetailInspector.tsx)
+file or to the
+[apps/arrows-ts/src/components/GeneralInspector.tsx](https://github.com/AnacletoLAB/schemalink-webapp/blob/main/apps/arrows-ts/src/components/GeneralInspector.tsx)
+file. The `DetailInspector` component is used to edit classes and relationships,
+the `GeneralInspector` component is used to edit the schema metadata. Both
+components are wrapped into a `Container` component which takes care of proxying
+properties that come from the Redux store. Because of this, to change which
+properties are passed to the edit forms, you also need to change the
+[apps/arrows-ts/src/containers/InspectorContainer.ts](https://github.com/AnacletoLAB/schemalink-webapp/blob/main/apps/arrows-ts/src/containers/InspectorContainer.ts)
+or the
+[apps/arrows-ts/src/containers/GeneralInspectorContainer.ts](https://github.com/AnacletoLAB/schemalink-webapp/blob/main/apps/arrows-ts/src/containers/GeneralInspectorContainer.ts)
+respectively.
+
 ### The [`model` library](https://github.com/AnacletoLAB/schemalink-webapp/tree/main/libs/model)
 
 #### Add/change properties for the schema, the classes, or the relationships
