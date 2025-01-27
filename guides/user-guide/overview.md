@@ -20,4 +20,4 @@ The figure below describes SchemaLink canvas and side panels.
 4. The download/export button, which opens the export dialog.
 5. The inspector toggle, which shows or hides the inspector.
 6. The canvas, showing the schema.
-7. The inspector, showing the properties of the schema or any selected item.
+7. The inspector panel, showing the properties of the schema or any selected item.
