@@ -9,7 +9,7 @@ layout: default
 ### Create a new schema from scratch
 
 1. Open the main menu
-2. Click on the New button
+2. Click on the ``New'' button
 3. Click on ``Store in: Web Browser Storage``
 
 ### Import an existing schema
@@ -21,7 +21,7 @@ layout: default
 
 {: .highlight }
 
-Importing a schema doesn't override the current schema.
+Importing a schema doesn't override the current schema. Schemas will be merged.
 
 {: .highlight }
 
@@ -35,12 +35,12 @@ unexpected results.
    the canvas.
 2. Within the ``inspector`` panel, edit:
 
-   - The schema description
-   - The schema license
+   - The schema ``description``
+   - The schema ``license``
 
 ### Change the schema name
 
-1. Click on the schema name
+1. Click on the schema ``name``
 2. Edit the name
 3. Click on Save
 
@@ -48,8 +48,8 @@ unexpected results.
 
 1. Make sure the ``inspector`` panel is visible by clicking on any empty space in
    the canvas.
-2. Click on the ``Add Class`` button in the general inspector
-3. Specify a <!-- ema lo dici sotto (unique) --> class name
+2. Click on the ``Add Class`` button in the ``inspector`` panel
+3. Specify a <!-- ema lo dici sotto (unique) --> class ``name``
 
 {: .warning }
 
@@ -59,13 +59,13 @@ those classes.
 
 ### Add a relationship
 
-1. Hover upon the perimeter of a class, until a dark blue circle appears.
+1. Hover upon the perimeter of a class, until a dark blue circle appears
 2. Drag the circle to another existing class, or to an empty space to create a
-   new class at the same time.
+   new class at the same time
 
 ### Edit a class 
 
-1. Select <!-- ema any number of --> a class or a set of classes (cmd+click in Mac, ctrl+click in Linux and Windows).
+1. Select <!-- ema any number of --> a class or a set of classes (``cmd+click`` in Mac, ``ctrl+click`` in Linux and Windows)
 2. Using the form in the detail inspector, edit:
 
    - The class ``description``
@@ -79,7 +79,7 @@ Only some options will be available if more than one class is selected.
 
 ### Edit a relationship 
 
-1. Select <!-- ema any number of --> a relationship or a set of relationships (cmd+click in Mac, ctrl+click in Linux and Windows).
+1. Select <!-- ema any number of --> a relationship or a set of relationships (cmd+click in Mac, ctrl+click in Linux and Windows)
 2. Using the form in the detail inspector, edit:
 
    - The relationship ``description``
@@ -88,14 +88,14 @@ Only some options will be available if more than one class is selected.
    - The relationship ``cardinality``
       - Expand the ``cardinality`` dropdown menu and select a
          predefined cardinality or ``Custom``.
-      - If ``Custom`` is selected, specify minimum and maximum cardinality for both the
+      - If ``Custom`` is selected, specify ``minimum`` and ``maximum cardinality`` for both the
    source and the target.
    - The relationship ``ontologies`` and ``examples`` - details below
    - The relationship ``attributes`` - details below
 
 {: .warning }
 
-When Custom is selected, if the minimum cardinality is greater or equal than the
+When ``Custom`` is selected, if the minimum cardinality is greater or equal than the
 maximum cardinality, neither of them will be included in any LinkML export.
 
 {: .highlight }
@@ -104,11 +104,11 @@ Only some options will be available if more than one relationship is selected.
 
 #### Annotate classes and elationships with ontologies and provide examples for instances
 
-1. Click on a single class or relationship.
-2. In the ``inspector``, expand the ontologies dropdown menu and select those that
-   are relevant.
-3. In the ``inspector``, expand the examples dropdown menu and select those that
-   are relevant.
+1. Click on a single class or relationship
+2. In the ``inspector``, expand the ``ontologies`` dropdown menu and select those that
+   are relevant
+3. In the ``inspector``, expand the ``examples`` dropdown menu and select those that
+   are relevant
 
 {: .highlight }
 
@@ -147,15 +147,17 @@ have to wait for the dropdown menu to be enabled.
 2. Choose the format you want to export the schema to, by switching to the
    corresponding tab
 3. Check the preview to make sure the export is correct
-4. Click on ``Download``
+4. Click on the ``Download`` button
 
 ### Change the graphical style of the schema
 
 Click on ``Style`` in the ``inspector`` panel to expand the style menu.
-<!-- 2. Use the form to change a variety of style options, such as:
+<!--
+2. Use the form to change a variety of style options, such as:
 
 {: .highlight }
 
 The general inspector and the detail inspector offer different styling options.
 Namely, the general inspector allows to perform global changes, while the detail
-inspector allows to perform changes on a per-entity basis. -->
+inspector allows to perform changes on a per-entity basis.
+-->
