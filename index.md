@@ -22,7 +22,7 @@ represent relationships between them.
 SchemaLink allows to create and edit classes, relationships, slots and attributes, ontology annotations, descriptions, examples, and customize the graphical style of the schema.
 -->
 Nodes represent classes in the schema, edges define relationships between classes.
-Users can easily add, remove, or update schema items and adjust their properties through an intuitive interface.
+Users can easily add, remove, or update schema items and adjust their attributes through an intuitive interface.
 
 **Features**
 
