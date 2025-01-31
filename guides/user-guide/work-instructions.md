@@ -21,13 +21,11 @@ layout: default
 
 {: .highlight }
 
-Importing a schema doesn't override the current schema. Schemas will be merged.
+Importing a schema does not override the current schema. Schemas will be merged.
 
 {: .highlight }
 
-Schemalink validates the schema you import, and return
-validation errors. A non-valid schema can still be imported, but might lead to
-unexpected results.
+Schemalink validates the imported schema and points out validation errors. A non-valid schema can still be imported but might lead to unexpected results.
 
 ### Edit schema properties
 
@@ -53,8 +51,8 @@ unexpected results.
 
 {: .warning }
 
-Classes without a name as well as classes with a non-unique name won't be
-included in any LinkML export. This also applies relationships that involve
+Classes without a name as well as classes with a non-unique name will not be
+included in any LinkML export. This also applies to relationships that involve
 those classes.
 
 ### Add a relationship
@@ -65,7 +63,7 @@ those classes.
 
 ### Edit a class 
 
-1. Select <!-- ema any number of --> a class or a set of classes (``cmd+click`` in Mac, ``ctrl+click`` in Linux and Windows)
+1. Select a class or a set of classes (``cmd+click`` in Mac, ``ctrl+click`` in Linux and Windows)
 2. Using the form in the detail inspector, edit:
 
    - The class ``description``
@@ -79,7 +77,7 @@ Only some options will be available if more than one class is selected.
 
 ### Edit a relationship 
 
-1. Select <!-- ema any number of --> a relationship or a set of relationships (cmd+click in Mac, ctrl+click in Linux and Windows)
+1. Select  a relationship or a set of relationships (cmd+click in Mac, ctrl+click in Linux and Windows)
 2. Using the form in the detail inspector, edit:
 
    - The relationship ``description``
@@ -102,7 +100,7 @@ maximum cardinality, neither of them will be included in any LinkML export.
 
 Only some options will be available if more than one relationship is selected.
 
-#### Annotate classes and elationships with ontologies and provide examples for instances
+#### Annotate classes and relationships with ontologies and provide examples for instances
 
 1. Click on a single class or relationship
 2. In the ``inspector``, expand the ``ontologies`` dropdown menu and select those that
@@ -112,7 +110,7 @@ Only some options will be available if more than one relationship is selected.
 
 {: .highlight }
 
-By default, the dropdown will show ten examples, randomly selected from selected ontologies' terms.
+By default, the dropdown will show ten examples randomly selected from selected ontologies' terms.
 
 {: .highlight }
 
@@ -124,13 +122,13 @@ You can add new examples by just typing them in the input field.
 
 {: .highlight }
 
-Ontologies and examples are fetched from a EBI's [Ontology Look-up Service](https://www.ebi.ac.uk/ols4/). Every time
+Ontologies and examples are fetched from an EBI Ontology [Ontology Look-up Service](https://www.ebi.ac.uk/ols4/). Every time
 Schemalink is loaded or the set of ontologies for annotating a class is changed, you
 have to wait for the dropdown menu to be enabled.
 
 #### Add and edit attributes for classes and relationships
 
-1. Select a class, a relationship, or a set taht includes classes and relationships
+1. Select a class, a relationship, or a set that includes classes and relationships
 2. In the ``inspector``, click on the ``+ Attribute`` button
 3. Provide a ``name`` for the attribute
 4. Optional: click on the edit panel and add:
