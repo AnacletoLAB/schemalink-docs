@@ -21,7 +21,7 @@ Users can easily add, remove, or update schema items and adjust their properties
   - Define classes, relationships, slots and attributes, and ontology annotations
   - Add descriptions, examples, and customize graphical styles
 - **Flexible Import and Export**
-  - Import existing LinkML schemas specified in YAML
+  - Import existing LinkML schemas specified in LinkML (YAML)
   - Export schemas in LinkML (YAML), PNG, SVG, JSON
 - **Applications**
   - Graphically drawing relationships between bio-entities grounded in OBO ontologies
