@@ -24,8 +24,8 @@ Users can easily add, remove, or update schema items and adjust their properties
   - Import existing LinkML schemas specified in YAML
   - Export schemas in LinkML (YAML), PNG, SVG, JSON
 - **Applications**
-  - Graphically representing relationships between bio-entities grounded in OBO ontologies
-  - Develop schemas for performing named entity recognition (NER) and relation extraction (RE) tasks using the [OntoGPT](https://github.com/monarch-initiative/ontogpt) package
+  - Graphically drawing relationships between bio-entities grounded in OBO ontologies
+  - Develop schemas to be employed in named entity recognition (NER) and relation extraction (RE) tasks using the [OntoGPT](https://github.com/monarch-initiative/ontogpt) package
 <!--- For the realization of SchemaLink, we decided to start from the web app Arrows. With Arrows, users can specify nodes and edges, assigning them
 names, types, and additional properties. Moreover, it offers facilities for loading graphs (locally or from cloud infrastructures), exporting in different
 forms (PNG, SVG, JSON, Cypher), easily adding/removing/updating nodes, edges, subgraphs, and their properties, and trivially changing the visual aspects of
