@@ -6,7 +6,7 @@ layout: default
 
 ## A LinkML Schema for Representing Relationships Between Genes and Biological Processes
 
-Suppose we want to create a LinkML schema that models interactions between genes and biological processes.
+Suppose we want to create a LinkML schema that models interactions between genes and biological processes. A bio-curator may define such a schema to represent and standardize biological knowledge from heterogeneous sources. Additionally, this schema can act as a meta-model for guiding a LLM in the targeted extraction of entities and relationships involving genes and biological processes from scientific texts.
 
 We begin by specifying (1) a schema name, and (2) a schema description. Moreover, we can include in the main canvas a new class  named "Gene" by clicking on the button (3).
 
@@ -45,3 +45,135 @@ The schema can be further expanded by considering other subclasses such as molec
 To export the schema in LinkML, click the ``Download / Export`` button in the top right corner of the canvas. A download panel will appear.
 
 ![9](https://github.com/user-attachments/assets/8f5ecd63-0517-47c5-a671-2a799a43c038)
+
+The LinkML schema for representing relationships of type "participates in" involving genes and biological processes is reported below.
+
+```yaml
+
+id: https://example.com/gene_bio_process
+default_range: string
+name: gene_bio_process
+title: GeneBioProcess
+description: LinkML schema for representing the interactions between genes and GO terms.
+license: ''
+prefixes:
+  linkml: https://w3id.org/linkml/
+  ontogpt: http://w3id.org/ontogpt/
+  HGNC: http://identifiers.org/hgnc/
+  GO: http://purl.obolibrary.org/obo/go/extensions/go-plus.owl
+  RO: http://purl.obolibrary.org/obo/ro.owl
+imports:
+  - ontogpt:core
+  - linkml:types
+classes:
+  GeneToBiologicalProcessRelationship:
+    is_a: Triple
+    description: >-
+      A triple where the subject is a Gene and where the object is a Biological
+      Process. A participates in relationship between a gene and a biological
+      process.
+    slot_usage:
+      subject:
+        range: Gene
+        annotations:
+          prompt.examples: RELA, BRCA1, alpha-1-B glycoprotein
+        minimum_cardinality: 0
+        maximum_cardinality: 1
+      object:
+        range: BiologicalProcess
+        annotations:
+          prompt.examples: viral genome replication, cellular homeostasis, DNA repair
+        minimum_cardinality: 0
+      predicate:
+        range: GeneToBiologicalProcessPredicate
+        annotations:
+          prompt.examples: RELA participates in cell growth, IL6 participates in homeostasis
+      evidence:
+        description: The experimental methods used for validating the relationship
+        required: true
+        identifier: false
+        range: string
+        multivalued: true
+  GeneToBiologicalProcessPredicate:
+    is_a: RelationshipType
+    attributes:
+      label:
+        description: The predicate for the GeneToBiologicalProcess relationships.
+    id_prefixes:
+      - RO
+    annotations:
+      annotators: sqlite:obo:ro
+  Gene:
+    is_a: NamedEntity
+    mixins: []
+    attributes:
+      symbol:
+        description: The HGNC symbol of the gene.
+        required: true
+        identifier: false
+        range: string
+      hgnc_id:
+        description: The HGNC identifier of the gene.
+        required: false
+        identifier: true
+        range: integer
+      synonym:
+        description: Synonyms for the gene.
+        required: false
+        identifier: false
+        range: string
+        multivalued: true
+        # unique_values: true --> not supported yet
+    id_prefixes:
+      - HGNC
+    annotations:
+      annotators: sqlite:obo:HGNC
+      prompt.examples: RELA, BRCA1, alpha-1-B glycoprotein
+  BiologicalProcess:
+    is_a: GOterm
+    mixins: []
+    attributes:
+      biological_process:
+        identifier: true
+        description: A unique identifier for the BiologicalProcess class.
+    id_prefixes: []
+    annotations:
+      prompt.examples: viral genome replication, cellular homeostasis, DNA repair
+  GOterm:
+    is_a: NamedEntity
+    description: >-
+      A Gene Ontology (GO) term that represents a standardized concept
+      describing a biological process, molecular function, or cellular
+      component. GO terms provide a controlled vocabulary for annotating gene
+      products and their roles in biology.
+    mixins: []
+    attributes:
+      go_id:
+        description: The GO term identifying the concept.
+        required: false
+        identifier: true
+        range: string
+      synonym:
+        description: Synonyms for the GO term.
+        required: false
+        identifier: false
+        range: string
+        multivalued: true
+        unique_values: true
+      description:
+        description: A description for the GO term.
+        required: false
+        identifier: false
+        range: string
+      label:
+        description: A label for the GO term.
+        required: true
+        identifier: false
+        range: string
+    id_prefixes:
+      - GO
+    annotations:
+      annotators: sqlite:obo:go
+      prompt.examples: dolipore septum, citrulline metabolic process, peptide pheromone export
+
+```
