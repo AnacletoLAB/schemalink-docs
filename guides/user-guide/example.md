@@ -91,7 +91,6 @@ classes:
       evidence:
         description: The experimental methods used for validating the relationship
         required: true
-        identifier: false
         range: string
         multivalued: true
   GeneToBiologicalProcessPredicate:
@@ -110,17 +109,13 @@ classes:
       symbol:
         description: The HGNC symbol of the gene.
         required: true
-        identifier: false
         range: string
       hgnc_id:
         description: The HGNC identifier of the gene.
-        required: false
         identifier: true
         range: integer
       synonym:
         description: Synonyms for the gene.
-        required: false
-        identifier: false
         range: string
         multivalued: true
         # unique_values: true --> not supported yet
@@ -150,25 +145,19 @@ classes:
     attributes:
       go_id:
         description: The GO term identifying the concept.
-        required: false
         identifier: true
         range: string
       synonym:
         description: Synonyms for the GO term.
-        required: false
-        identifier: false
         range: string
         multivalued: true
-        unique_values: true
+        # unique_values: true --> not supported yet
       description:
         description: A description for the GO term.
-        required: false
-        identifier: false
         range: string
       label:
         description: A label for the GO term.
         required: true
-        identifier: false
         range: string
     id_prefixes:
       - GO
