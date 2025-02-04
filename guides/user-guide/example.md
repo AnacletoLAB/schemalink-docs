@@ -7,6 +7,7 @@ layout: default
 ## A LinkML Schema for Representing Relationships Between Genes and Biological Processes
 
 Suppose that we want to create a LinkML schema that models interactions between genes and biological processes.
+
 We begin by specifying (1) a schema name, (2) a schema description and (3) a class named "Gene".
 
 ![1](https://github.com/user-attachments/assets/c23556ea-8d9f-4ab2-9802-ef2cbc21b1ad)
@@ -15,7 +16,7 @@ The class Gene is enhanced by (1) adding a description. We also (2) annotate the
 
 ![2](https://github.com/user-attachments/assets/afa5e5fd-8c5c-4ec9-b3af-8d7a09bc376a)
 
-The class Gene is further refined by adding key attributes. For example, the attribute "Symbol" is added (1) and improved by specifying its (2) description and (3) type. The required flag is added to Symbol (4).
+The class Gene is further refined by adding key attributes. For example, the attribute named "Symbol" is added (1) and improved by specifying its (2) description and (3) type. The required flag is added to Symbol (4): instances of class Gene **require** the Symbol attribute.
 
 ![3](https://github.com/user-attachments/assets/734472d3-7432-42a1-8259-1026ae0b453e)
 
@@ -25,7 +26,7 @@ We now introduce a class named "BiologicalProcess" for representing biological p
 
 ![4](https://github.com/user-attachments/assets/0662cab8-707b-4f35-91a1-d02e8dbb4467)
 
-Biological processes are represented using gene ontology terms. Therefore, we define a parent class named "GOterms", and specify that biological processes are a specialization of GO terms by using the ``INHERITANCE`` relationship type. Attributes and ontology annotations from the GOterm class are inherited by BiologicalProcess.
+Biological processes are represented using gene ontology terms. Therefore, we define a parent class named "GOterm", and specify that biological processes are a specialization of GO terms by using the ``INHERITANCE`` relationship type. Attributes and ontology annotations from the GOterm class are inherited by BiologicalProcess.
 
 ![5](https://github.com/user-attachments/assets/634320a3-613a-414f-8953-92d9bab76b08)
 
@@ -37,7 +38,7 @@ Attributes for the ``Gene-participates in-BiologicalProcess`` association relati
 
 ![7](https://github.com/user-attachments/assets/6c558bd9-e8f6-4b38-8bd0-fc5a02ee71d2)
 
-The schema can be further expanded by considering other subclasses such as molecular functions and cellular components and relationships between classes. The schema can also be enhanced by considering attributes specific to subclasses.
+The schema can be further expanded by considering other subclasses such as molecular functions and cellular components and new relationships between classes. The schema can also be enhanced by considering attributes specific to subclasses (e.g. ``activity type`` for MolecularFunction and ``cellular location`` for CellularComponent).
 
 ![8](https://github.com/user-attachments/assets/ce012b6d-639c-4ab8-be3e-c4db142d6b32)
 
