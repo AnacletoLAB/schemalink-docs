@@ -6,7 +6,7 @@ layout: default
 
 ## A LinkML Schema for Representing Relationships Between Genes and Biological Processes
 
-Suppose we want to create a LinkML schema that models interactions between genes and biological processes. A bio-curator may define such a schema to represent and standardize biological knowledge from heterogeneous sources. Additionally, this schema can act as a meta-model for guiding a LLM in the targeted extraction of entities and relationships involving genes and biological processes from scientific texts.
+Suppose we want to create a LinkML schema that models interactions between genes and biological processes. A bio-curator may define such a schema to represent and standardize biological knowledge from heterogeneous sources. Additionally, this schema can act as a meta-model to be translated in targeted prompts for guiding a LLM in the extraction of entities and relationships involving genes and biological processes from scientific texts.
 
 We begin by specifying (1) a schema name, and (2) a schema description. Moreover, we can include in the main canvas a new class  named "Gene" by clicking on the button (3).
 
