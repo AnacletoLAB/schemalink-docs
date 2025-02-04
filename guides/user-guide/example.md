@@ -40,7 +40,7 @@ Attributes for the ``Gene-participates in-BiologicalProcess`` association relati
 
 The schema can be further expanded by considering other subclasses such as molecular functions and cellular components and new relationships between classes. The schema can also be enhanced by considering attributes specific to subclasses (e.g. ``activity type`` for MolecularFunction and ``cellular location`` for CellularComponent).
 
-![8](https://github.com/user-attachments/assets/ce012b6d-639c-4ab8-be3e-c4db142d6b32)
+![8](https://github.com/user-attachments/assets/b890452d-3d20-445d-8d8f-f2f57bc7f4af)
 
 To export the schema in LinkML, click the ``Download / Export`` button in the top right corner of the canvas. A download panel will appear.
 
