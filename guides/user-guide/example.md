@@ -98,6 +98,7 @@ classes:
     attributes:
       label:
         description: The predicate for the GeneToBiologicalProcess relationships.
+        pattern: "participates in"
     id_prefixes:
       - RO
     annotations:
