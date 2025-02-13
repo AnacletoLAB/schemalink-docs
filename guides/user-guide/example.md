@@ -50,91 +50,96 @@ The LinkML schema for representing relationships of type "participates in" invol
 
 ```yaml
 
-id: https://example.com/gene_bio_process
+id: https://schemalink.anacleto.di.unimi.it/gene_bio_process
+
 default_range: string
+
 name: gene_bio_process
+
 title: GeneBioProcess
+
 description: LinkML schema for representing the interactions between genes and GO terms.
-license: ''
+
 prefixes:
   linkml: https://w3id.org/linkml/
   ontogpt: http://w3id.org/ontogpt/
+  rdf: https://www.w3.org/1999/02/22-rdf-syntax-ns
   HGNC: http://identifiers.org/hgnc/
   GO: http://purl.obolibrary.org/obo/go/extensions/go-plus.owl
-  RO: http://purl.obolibrary.org/obo/ro.owl
+
 imports:
   - ontogpt:core
   - linkml:types
+
 classes:
-  GeneToBiologicalProcessRelationship:
+  GeneParticipatesInBiologicalProcessRelationship:
     is_a: Triple
     description: >-
       A triple where the subject is a Gene and where the object is a Biological
-      Process. A participates in relationship between a gene and a biological
-      process.
+      Process. A participates in relationship between a gene and a
+      biological process.
     slot_usage:
       subject:
         range: Gene
         annotations:
-          prompt.examples: RELA, BRCA1, alpha-1-B glycoprotein
+          prompt.examples: RELA,  BRCA1,  alpha-1-B glycoprotein
         minimum_cardinality: 0
         maximum_cardinality: 1
       object:
         range: BiologicalProcess
         annotations:
-          prompt.examples: viral genome replication, cellular homeostasis, DNA repair
+          prompt.examples: viral genome replication,  cellular homeostasis,  DNA repair
         minimum_cardinality: 0
       predicate:
-        range: GeneToBiologicalProcessPredicate
+        range: GeneParticipatesInBiologicalProcessPredicate
         annotations:
-          prompt.examples: RELA participates in cell growth, IL6 participates in homeostasis
+          prompt.examples: RELA participates in cell growth,  IL6 participates in homeostasis
       evidence:
         description: The experimental methods used for validating the relationship
         required: true
+        identifier: false
         range: string
         multivalued: true
-  GeneToBiologicalProcessPredicate:
+
+  GeneParticipatesInBiologicalProcessPredicate:
     is_a: RelationshipType
     attributes:
       label:
-        description: The predicate for the GeneToBiologicalProcess relationships.
-        pattern: "participates in"
-    id_prefixes:
-      - RO
-    annotations:
-      annotators: sqlite:obo:ro
+        description: >-
+          The predicate for the GeneParticipatesInBiologicalProcess
+          relationships.
+      id:
+        pattern: 'participates in'
+    id_prefixes: []
+    annotations: {}
+
   Gene:
     is_a: NamedEntity
+    description: ''
     mixins: []
     attributes:
       symbol:
         description: The HGNC symbol of the gene.
         required: true
+        identifier: false
         range: string
       hgnc_id:
         description: The HGNC identifier of the gene.
+        required: true
         identifier: true
         range: integer
       synonym:
         description: Synonyms for the gene.
+        required: false
+        identifier: false
         range: string
         multivalued: true
-        # unique_values: true --> not supported yet
     id_prefixes:
       - HGNC
     annotations:
       annotators: sqlite:obo:HGNC
-      prompt.examples: RELA, BRCA1, alpha-1-B glycoprotein
-  BiologicalProcess:
-    is_a: GOterm
-    mixins: []
-    attributes:
-      biological_process:
-        identifier: true
-        description: A unique identifier for the BiologicalProcess class.
-    id_prefixes: []
-    annotations:
-      prompt.examples: viral genome replication, cellular homeostasis, DNA repair
+      prompt.examples: RELA,  BRCA1,  alpha-1-B glycoprotein
+
   GOterm:
     is_a: NamedEntity
     description: >-
@@ -146,24 +151,43 @@ classes:
     attributes:
       go_id:
         description: The GO term identifying the concept.
+        required: true
         identifier: true
         range: string
       synonym:
         description: Synonyms for the GO term.
+        required: false
+        identifier: false
         range: string
         multivalued: true
-        # unique_values: true --> not supported yet
       description:
         description: A description for the GO term.
+        required: false
+        identifier: false
         range: string
       label:
         description: A label for the GO term.
         required: true
+        identifier: false
         range: string
     id_prefixes:
       - GO
     annotations:
       annotators: sqlite:obo:go
-      prompt.examples: dolipore septum, citrulline metabolic process, peptide pheromone export
+      prompt.examples: >-
+        dolipore septum,  citrulline metabolic process,  peptide pheromone
+        export
+
+  BiologicalProcess:
+    is_a: GOterm
+    description: ''
+    mixins: []
+    attributes:
+      biological_process_id:
+        identifier: true
+        description: A unique identifier for the BiologicalProcess class.
+    id_prefixes: []
+    annotations:
+      prompt.examples: viral genome replication,  cellular homeostasis,  DNA repair
 
 ```
